@@ -1,5 +1,6 @@
-import React from "react"
+import About from '../pages/About'
+import React from 'react'
 
 export default function Home() {
-  return <div>Hello world!</div>
+  return <About />
 }
