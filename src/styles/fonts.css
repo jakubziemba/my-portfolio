@@ -1,6 +1,23 @@
 @font-face {
-  font-family: 'BN Naples';
-  src: url('../fonts/BNNaples.woff') format('woff');
+  font-family: 'Standnard';
+  src: url('../fonts/standard-book-webfont.eot');
+  src: url('../fonts/standard-book-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/standard-book-webfont.woff2') format('woff2'),
+    url('../fonts/standard-book-webfont.woff') format('woff'),
+    url('../fonts/standard-book-webfont.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Standnard';
+  src: url('../fonts/standard-bold-webfont.eot');
+  src: url('../fonts/standard-bold-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('../fonts/standard-bold-webfont.woff2') format('woff2'),
+    url('../fonts/standard-bold-webfont.woff') format('woff'),
+    url('../fonts/standard-bold-webfont.ttf') format('truetype');
   font-weight: bold;
   font-display: swap;
 }
