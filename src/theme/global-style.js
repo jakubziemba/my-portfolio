@@ -3,9 +3,8 @@ import reset from 'styled-reset'
 
 export const theme = {
   font: {
-    slab: 'BN Naples',
-    sans: '"Poppins", sans-serif',
-    serif: '"Rokkit", serif',
+    slab: '"Standard", sans-serif',
+    sans: '"Standard", sans-serif',
   },
   fontSize: {
     xs: '0.5rem',
@@ -33,8 +32,8 @@ export const theme = {
     xl: '140%',
   },
   colors: {
-    primary: '#F3EBD6',
-    secondary: '#000000',
+    bg: '#181515',
+    txt: '#FCFCFC',
   },
 }
 
@@ -44,6 +43,8 @@ export const GlobalStyle = createGlobalStyle`
 
   *, *:before, *:after {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
@@ -52,14 +53,13 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.sans};
     font-size: ${({ theme }) => theme.fontSize.base};
     font-weight: 400;
-    background: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme }) => theme.colors.bg};
     color: ${({ theme }) => theme.colors.txt};
-    /* min-height: 100vh; */
   }
   
   body {
-    background: ${({ theme }) => theme.colors.primary};
-    /* min-height: 100vh; */
+    background: ${({ theme }) => theme.colors.bg};
+    height: 100vh;
     position: relative;
   }
 `
