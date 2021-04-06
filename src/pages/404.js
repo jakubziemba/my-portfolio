@@ -1,5 +1,7 @@
 import React from 'react'
 
-export default function ErrorPage() {
+const ErrorPage = () => {
   return <div>Sorry this page does not exist</div>
 }
+
+export default ErrorPage
