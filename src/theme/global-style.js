@@ -32,7 +32,7 @@ export const theme = {
     xl: '140%',
   },
   colors: {
-    bg: '#181515',
+    bg: '#030303',
     txt: '#FCFCFC',
   },
 }
@@ -61,5 +61,10 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.bg};
     height: 100vh;
     position: relative;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.txt};
   }
 `
