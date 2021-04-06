@@ -12,20 +12,47 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-google-fonts-v2`,
+      resolve: 'gatsby-plugin-anchor-links',
       options: {
-        fonts: [
-          {
-            family: 'Poppins',
-            weights: ['300', '400', '500', '600', '700'],
+        offset: -50,
+        duration: 300,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-module-resolver',
+      options: {
+        root: './src',
+        aliases: {
+          assets: './assets',
+          components: './components',
+          data: './data',
+          fonts: './fonts',
+          images: './images',
+          styles: './styles',
+          theme: './theme',
+          query: './query',
+          static: {
+            root: './public',
+            alias: './static',
           },
-          {
-            family: 'Rokkit',
-            variable: true,
-          },
-        ],
+        },
       },
     },
   ],
