@@ -1,21 +1,18 @@
-import { Link } from 'gatsby'
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-export default function Header({ isVisible, setIsVisible }) {
+import StarSvg from '../../assets/star.inline.svg'
+
+const Header = ({ isVisible, setIsVisible }) => {
   return (
     <Nav>
       <div className='logo'>
         <Link to='/' id='logo'>
-          JZ
+          Jakub Ziemba
         </Link>
       </div>
-      <div className='navigation'>
-        {/* <Link to='/'>About</Link>
-        <Link to='/work'>Work</Link>
-        <Link to='/contact'>Contact</Link> */}
-        <button onClick={() => setIsVisible(!isVisible)}>Menu</button>
-      </div>
+      <Star onClick={() => setIsVisible(!isVisible)} />
     </Nav>
   )
 }
@@ -24,51 +21,38 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 5rem;
-  width: 100%;
-  background-color: #000;
-  padding: 0 1rem;
-  color: ${({ theme }) => theme.colors.primary};
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  min-height: 4rem;
+  background-color: ${({ theme }) => theme.colors.bg};
+  padding: 0 0.75rem;
+  color: ${({ theme }) => theme.colors.txt};
+
+  .logo {
+    margin-top: 0.5rem;
+  }
 
   #logo {
     text-decoration: none;
-    font-size: 1.8rem;
-    font-family: ${({ theme }) => theme.font.slab};
-    font-weight: ${({ theme }) => theme.fontWeight.bold};
+    font-size: ${({ theme }) => theme.fontSize.mdsm};
+    font-family: ${({ theme }) => theme.font.sans};
     cursor: pointer;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.txt};
 
     &::visited,
     &::active,
     &::link {
-      color: ${({ theme }) => theme.colors.primary};
-    }
-  }
-
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-    color: ${({ theme }) => theme.colors.primary};
-    font-family: ${({ theme }) => theme.font.slab};
-
-    button {
-      background: ${({ theme }) => theme.colors.primary};
-      border: none;
-      font-family: ${({ theme }) => theme.font.slab};
-      font-size: ${({ theme }) => theme.fontSize.base};
-      padding: 0.5rem 0.5rem;
-      outline: none;
-      cursor: pointer;
-    }
-
-    a {
-      text-decoration: none;
-      cursor: pointer;
-
-      &:active {
-        color: ${({ theme }) => theme.colors.primary};
-      }
+      color: ${({ theme }) => theme.colors.txt};
     }
   }
 `
+
+const Star = styled(StarSvg)`
+  position: fixed;
+  top: 1rem;
+  right: 0.75rem;
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  cursor: pointer;
+`
+
+export default Header
