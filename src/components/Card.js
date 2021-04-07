@@ -22,17 +22,12 @@ const Card = () => {
             {photos.map(photo => {
               if (photo.node.name === `${project.path}-main`) {
                 return (
-                  <GatsbyImage
-                    key={photo.node.name}
-                    image={photo.node.childImageSharp.gatsbyImageData}
-                    alt={photo.node.name}
-                    style={{
-                      borderBottomLeftRadius: `10px`,
-                      borderBottomRightRadius: `10px`,
-                      height: `170px`,
-                    }}
-                    objectPosition='50% 0%'
-                  />
+                  <ImageWrapper key={photo.node.name}>
+                    <GatsbyImage
+                      image={photo.node.childImageSharp.gatsbyImageData}
+                      alt={`${photo.node.name} project`}
+                    />
+                  </ImageWrapper>
                 )
               }
               return null
@@ -82,6 +77,13 @@ const Tech = styled.div`
 const Role = styled(Tech)`
   padding: 0.75rem 1rem 0rem;
   font-weight: ${({ theme }) => theme.fontWeight.bold};
+`
+
+const ImageWrapper = styled.div`
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  display: flex;
 `
 
 export default Card
