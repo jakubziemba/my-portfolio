@@ -1,3 +1,4 @@
+import React from 'react'
 import { GlobalStyle } from './src/theme/global-style'
 import { wrapRootElement as wrap } from './root-wrapper'
 
