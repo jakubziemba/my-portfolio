@@ -29,7 +29,8 @@ const Card = () => {
                       image={photo.node.childImageSharp.gatsbyImageData}
                       alt={`${photo.node.name} project`}
                       objectFit='contain'
-                      objectPosition='50% 0%'
+                      objectPosition='0% 100%'
+                      // layout='fullWidth'
                     />
                   </ImageWrapper>
                 )
@@ -56,7 +57,6 @@ const CardWrapper = styled.div`
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 1.5rem 1.5rem 1.5rem 0.5rem;
-    /* min-height: 470px; */
 
     .text {
       transition: all 0.2s ease;
@@ -68,6 +68,10 @@ const CardWrapper = styled.div`
         transform: translateX(1rem);
       }
     }
+  }
+
+  @media (min-width: 1200px) {
+    max-height: 600px;
   }
 `
 
@@ -135,6 +139,7 @@ const Role = styled(Tech)`
 const ImageWrapper = styled.div`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  overflow: hidden;
   display: flex;
 
   @media (min-width: 768px) {
@@ -142,6 +147,11 @@ const ImageWrapper = styled.div`
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     align-items: center;
+    display: block;
+  }
+
+  @media (min-width: 1200px) {
+    width: 40%;
   }
 `
 
