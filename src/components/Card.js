@@ -13,19 +13,23 @@ const Card = () => {
   return (
     <>
       {projects.map(project => (
-        <Link key={project.path} to={`/projects/${project.path}`}>
-          <CardWrapper key={project.path}>
-            <Title>{project.title}</Title>
-            <Date>{project.date}</Date>
-            <Role>{project.role}</Role>
-            <Tech>{project.tech}</Tech>
+        <StyledLink key={project.path} to={`/projects/${project.path}`}>
+          <CardWrapper>
+            <TextWrapper className='text'>
+              <Title>{project.title}</Title>
+              <Date>{project.date}</Date>
+              <Role>{project.role}</Role>
+              <Tech>{project.tech}</Tech>
+            </TextWrapper>
             {photos.map(photo => {
               if (photo.node.name === `${project.path}-main`) {
                 return (
-                  <ImageWrapper key={photo.node.name}>
+                  <ImageWrapper className='imageWrapper' key={photo.node.name}>
                     <GatsbyImage
                       image={photo.node.childImageSharp.gatsbyImageData}
                       alt={`${photo.node.name} project`}
+                      objectFit='contain'
+                      objectPosition='50% 0%'
                     />
                   </ImageWrapper>
                 )
@@ -33,7 +37,7 @@ const Card = () => {
               return null
             })}
           </CardWrapper>
-        </Link>
+        </StyledLink>
       ))}
     </>
   )
@@ -41,30 +45,66 @@ const Card = () => {
 
 const CardWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
+  flex-flow: row wrap;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(6px);
   border-radius: 10px;
-  margin-bottom: 1.5rem;
   z-index: 2;
+  transition: background 0.2s ease;
+
+  @media (min-width: 768px) {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem 1.5rem 0.5rem;
+    /* min-height: 470px; */
+
+    .text {
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.08);
+      .text {
+        transform: translateX(1rem);
+      }
+    }
+  }
 `
 
-const Title = styled.div`
+const TextWrapper = styled.div`
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+`
+
+const Title = styled.h2`
   display: flex;
   max-width: 70%;
   line-height: 122%;
-  padding: 1.125rem 1rem 0rem 1rem;
+  padding: 1rem 1rem 0rem;
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-family: ${({ theme }) => theme.font.sans};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
+
+  @media (min-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.xllg};
+  }
+
+  @media (min-width: 960px) {
+    max-width: 80%;
+  }
 `
 
 const Date = styled.h3`
-  padding: 0.5rem 1rem 0rem 1rem;
+  padding: 0.5rem 1rem 0rem;
   font-size: ${({ theme }) => theme.fontSize.base};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   text-transform: uppercase;
   color: #717171;
+
+  @media (min-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.mdsm};
+  }
 `
 
 const Tech = styled.div`
@@ -72,18 +112,41 @@ const Tech = styled.div`
   padding: 0.25rem 1rem 1rem;
   font-size: 1.125rem;
   line-height: 140%;
+
+  @media (min-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.md};
+    width: 90%;
+  }
+
+  @media (min-width: 960px) {
+    width: 75%;
+  }
 `
 
 const Role = styled(Tech)`
   padding: 0.75rem 1rem 0rem;
   font-weight: ${({ theme }) => theme.fontWeight.bold};
+
+  @media (min-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.mdsm};
+  }
 `
 
 const ImageWrapper = styled.div`
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  overflow: hidden;
   display: flex;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    align-items: center;
+  }
+`
+
+const StyledLink = styled(Link)`
+  margin-bottom: 1rem;
 `
 
 export default Card

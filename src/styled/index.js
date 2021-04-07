@@ -7,11 +7,15 @@ export const Wrapper = styled.div`
   margin: 0;
 `
 
-export const Title = styled.div`
+export const Title = styled.h1`
   display: flex;
   padding: 1rem 0 0.75rem 0;
   font-family: ${({ theme }) => theme.font.sans};
   font-size: 3rem;
+
+  @media (min-width: 768px) {
+    font-size: 3.5rem;
+  }
 `
 
 export const ProjectTitle = styled(Title)`
@@ -31,6 +35,10 @@ export const Description = styled.div`
     &:last-child {
       margin-bottom: 0;
     }
+  }
+
+  @media (min-width: 768px) {
+    max-width: 70%;
   }
 `
 
