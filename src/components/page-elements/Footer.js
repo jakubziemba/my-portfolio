@@ -23,6 +23,10 @@ const StyledFooter = styled.footer`
   .copy {
     font-size: 1.25rem;
   }
+
+  @media (min-width: 768px) {
+    padding: 0.75rem 1.25rem 1.5rem;
+  }
 `
 
 export default Footer

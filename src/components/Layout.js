@@ -21,7 +21,11 @@ const Layout = ({ children }) => {
 
 const Main = styled.main`
   padding: 0rem 0.75rem;
-  min-height: 80vh;
+  min-height: calc(93vh - 9.75rem);
+
+  @media (min-width: 768px) {
+    padding: 0 1.25rem;
+  }
 `
 
 export default Layout

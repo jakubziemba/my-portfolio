@@ -5,6 +5,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   margin: 0;
+
+  @media (min-width: 768px) {
+    margin-top: 2rem;
+  }
 `
 
 export const Title = styled.h1`
@@ -15,6 +19,7 @@ export const Title = styled.h1`
 
   @media (min-width: 768px) {
     font-size: 3.5rem;
+    font-weight: 700;
   }
 `
 
@@ -39,6 +44,11 @@ export const Description = styled.div`
 
   @media (min-width: 768px) {
     max-width: 70%;
+
+    p {
+      font-size: ${({ theme }) => theme.fontSize.xllg};
+      margin-bottom: 1rem;
+    }
   }
 `
 
@@ -48,6 +58,12 @@ export const ProjectDescription = styled(Description)`
   p {
     font-size: ${({ theme }) => theme.fontSize.mdsm};
     margin-bottom: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    p {
+      font-size: ${({ theme }) => theme.fontSize.lg};
+    }
   }
 `
 
@@ -61,4 +77,8 @@ export const Link = styled.a`
   font-weight: bold;
   margin-right: 1rem;
   position: relative;
+
+  @media (min-width: 768px) {
+    font-size: ${({ theme }) => theme.fontSize.mdsm};
+  }
 `
