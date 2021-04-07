@@ -51,21 +51,19 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: ${({ theme }) => theme.font.sans};
-    font-size: ${({ theme }) => theme.fontSize.base};
-    font-weight: 400;
-    background: ${({ theme }) => theme.colors.bg};
-    color: ${({ theme }) => theme.colors.txt};
+    font-family: "Standard", sans-serif;
+    background: #030303;
+    color: #FCFCFC;
   }
   
   body {
-    background: ${({ theme }) => theme.colors.bg};
+    background: #030303;
     height: 100vh;
     position: relative;
   }
 
   a {
     text-decoration: none;
-    color: ${({ theme }) => theme.colors.txt};
+    color: #FCFCFC;
   }
 `
