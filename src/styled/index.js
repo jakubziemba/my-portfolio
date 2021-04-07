@@ -25,11 +25,32 @@ export const Description = styled.div`
 
   p {
     font-size: 1.75rem;
-    line-height: 150%;
+    line-height: 140%;
     margin-bottom: 0.625rem;
 
     &:last-child {
       margin-bottom: 0;
     }
   }
+`
+
+export const ProjectDescription = styled(Description)`
+  margin-top: 1.5rem;
+
+  p {
+    font-size: ${({ theme }) => theme.fontSize.mdsm};
+    margin-bottom: 1.25rem;
+  }
+`
+
+export const LinksContainer = styled.div`
+  display: flex;
+`
+
+export const Link = styled.a`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.txt};
+  font-weight: bold;
+  margin-right: 1rem;
+  position: relative;
 `
