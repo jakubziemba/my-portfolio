@@ -1,3 +1,9 @@
-import { wrapRootElement as wrap } from './root-wrapper'
+import React from 'react'
+import { GlobalStyle } from './src/theme/global-style'
 
-export const wrapRootElement = wrap
+export const wrapPageElement = ({ element }) => (
+  <>
+    <GlobalStyle />
+    {element}
+  </>
+)
