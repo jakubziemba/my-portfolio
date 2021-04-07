@@ -3,8 +3,7 @@ import reset from 'styled-reset'
 
 export const theme = {
   font: {
-    slab: '"Standard", sans-serif',
-    sans: '"Standard", sans-serif',
+    sans: 'Standard, sans-serif',
   },
   fontSize: {
     xs: '0.5rem',

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Standard';
+  font-family: Standard;
   src: url('../fonts/standard-book-webfont.eot');
   src: url('../fonts/standard-book-webfont.eot?#iefix')
       format('embedded-opentype'),
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: 'Standard';
+  font-family: Standard;
   src: url('../fonts/standard-bold-webfont.eot');
   src: url('../fonts/standard-bold-webfont.eot?#iefix')
       format('embedded-opentype'),
