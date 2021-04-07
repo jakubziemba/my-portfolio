@@ -14,6 +14,8 @@ const Projects = () => {
 }
 
 const StyledWrapper = styled(Wrapper)`
+  display: flex;
+  justify-content: center;
   position: relative;
 `
 
