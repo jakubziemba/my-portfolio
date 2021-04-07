@@ -14,20 +14,14 @@ const Footer = () => {
 const StyledFooter = styled.footer`
   display: flex;
   justify-content: flex-start;
-  /* align-items: center; */
-  height: 3rem;
   margin-top: 6.25rem;
   background-color: ${({ theme }) => theme.colors.bg};
   color: ${({ theme }) => theme.colors.txt};
-  padding: 0.75rem;
+  padding: 0.75rem 0.75rem 1.5rem;
+  line-height: 1.2;
 
   .copy {
-    /* text-align: center; */
-    font-size: 1rem;
-
-    p:first-child {
-      margin-bottom: 0.1rem;
-    }
+    font-size: 1.25rem;
   }
 `
 
