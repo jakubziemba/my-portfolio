@@ -1,18 +1,29 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { useMediaQuery } from 'react-responsive'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 import StarSvg from '../../assets/star.inline.svg'
 
 const Header = ({ isVisible, setIsVisible }) => {
+  const isMdScreen = useMediaQuery({ minWidth: 768 })
   return (
     <Nav>
-      <div className='logo'>
+      <div className='logoContainer'>
         <Link to='/' id='logo'>
           Jakub Ziemba
         </Link>
       </div>
-      <Star onClick={() => setIsVisible(!isVisible)} />
+      {!isMdScreen && <Star onClick={() => setIsVisible(!isVisible)} />}
+      {isMdScreen && (
+        <Menu>
+          <AnchorLink to='/#projects' title='Projects' stripHash>
+            Projects
+          </AnchorLink>
+          <Link to='/contact'>Contact</Link>
+        </Menu>
+      )}
     </Nav>
   )
 }
@@ -26,7 +37,7 @@ const Nav = styled.nav`
   padding: 0 0.75rem;
   color: ${({ theme }) => theme.colors.txt};
 
-  .logo {
+  .logoContainer {
     margin-top: 0.5rem;
   }
 
@@ -43,6 +54,14 @@ const Nav = styled.nav`
       color: ${({ theme }) => theme.colors.txt};
     }
   }
+
+  @media (min-width: 768px) {
+    padding: 0 1.25rem;
+
+    #logo {
+      font-size: ${({ theme }) => theme.fontSize.md};
+    }
+  }
 `
 
 const Star = styled(StarSvg)`
@@ -53,6 +72,13 @@ const Star = styled(StarSvg)`
   height: 50px;
   z-index: 2;
   cursor: pointer;
+`
+
+const Menu = styled.div`
+  font-size: ${({ theme }) => theme.fontSize.md};
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
 `
 
 export default Header
