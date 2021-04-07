@@ -52,6 +52,5 @@ const Machowska = () => {
 const ImageWrapper = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  margin: 0 -12px;
 `
 export default Machowska
