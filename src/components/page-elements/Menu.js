@@ -56,7 +56,7 @@ const Wrapper = styled.div`
   transform: ${({ isVisible }) =>
     isVisible ? `translateX(0%)` : `translateX(100%)`};
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 
   .close {
     display: flex;
