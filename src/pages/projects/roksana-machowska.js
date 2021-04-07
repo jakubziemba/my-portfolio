@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
+import styled from 'styled-components'
 
 import Links from '../../components/Links'
 import { ProjectTitle, Wrapper, ProjectDescription } from '../../styled'
@@ -18,28 +19,39 @@ const Machowska = () => {
           <p key={id}>{text}</p>
         ))}
       </ProjectDescription>
-      <StaticImage
-        src='../../images/machowska-ipad.jpeg'
-        alt="Roksana Machowska's welcome page for iPad"
-        placeholder='blurred'
-        style={{ marginBottom: `1rem` }}
-        quality='100'
-      />
-      <StaticImage
-        src='../../images/machowska-paintings.jpeg'
-        alt="Roksana Machowska's painting page"
-        placeholder='blurred'
-        style={{ marginBottom: `1rem` }}
-        quality='100'
-      />
-      <StaticImage
-        src='../../images/machowska-about.jpeg'
-        alt="Roksana Machowska's about page"
-        placeholder='blurred'
-        quality='100'
-      />
+      <ImageWrapper>
+        <StaticImage
+          src='../../images/machowska-ipad.jpeg'
+          alt="Roksana Machowska's welcome page for iPad"
+          placeholder='blurred'
+          quality='100'
+          layout='fullWidth'
+          style={{ marginBottom: `1rem` }}
+        />
+        <StaticImage
+          src='../../images/machowska-paintings.jpeg'
+          alt="Roksana Machowska's painting page"
+          placeholder='blurred'
+          quality='100'
+          layout='fullWidth'
+          style={{ marginBottom: `1rem` }}
+        />
+        <StaticImage
+          src='../../images/machowska-about.jpeg'
+          alt="Roksana Machowska's about page"
+          placeholder='blurred'
+          quality='100'
+          layout='fullWidth'
+          style={{ marginBottom: `1rem` }}
+        />
+      </ImageWrapper>
     </Wrapper>
   )
 }
 
+const ImageWrapper = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 -12px;
+`
 export default Machowska
