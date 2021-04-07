@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
+import { gsap } from 'gsap'
 
 import Footer from './page-elements/Footer'
 import Header from './page-elements/Header'
@@ -8,14 +9,23 @@ import '../styles/fonts.css'
 
 const Layout = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const wrapperRef = useRef()
+
+  useEffect(() => {
+    gsap.fromTo(
+      [wrapperRef.current],
+      { opacity: 0 },
+      { opacity: 1, duration: 1, delay: 1 }
+    )
+  }, [])
 
   return (
-    <>
+    <div ref={wrapperRef} style={{ opacity: 0 }}>
       <Header isVisible={isVisible} setIsVisible={setIsVisible} />
       <Menu isVisible={isVisible} setIsVisible={setIsVisible} />
       <Main>{children}</Main>
       <Footer />
-    </>
+    </div>
   )
 }
 
