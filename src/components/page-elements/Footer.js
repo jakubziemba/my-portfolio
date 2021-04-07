@@ -21,7 +21,7 @@ const StyledFooter = styled.footer`
   line-height: 1.2;
 
   .copy {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   @media (min-width: 768px) {
