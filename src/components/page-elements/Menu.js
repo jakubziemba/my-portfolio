@@ -2,41 +2,47 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import styled from 'styled-components'
-
+import { useMediaQuery } from 'react-responsive'
 const Menu = ({ isVisible, setIsVisible }) => {
+  const isMdScreen = useMediaQuery({ minWidth: 768 })
+
   return (
-    <Wrapper isVisible={isVisible}>
-      <div className='close'>
-        <button onClick={() => setIsVisible(!isVisible)}>X</button>
-      </div>
-      <div className='menu'>
-        <div className='title'>
-          <h2>Menu</h2>
-        </div>
-        <div className='links'>
-          <h1>
-            <Link to='/' onClick={() => setIsVisible(!isVisible)}>
-              Home
-            </Link>
-          </h1>
-          <h1>
-            <AnchorLink
-              to='/#projects'
-              title='Projects'
-              stripHash
-              onAnchorLinkClick={() => setIsVisible(!isVisible)}
-            >
-              Projects
-            </AnchorLink>
-          </h1>
-          <h1>
-            <Link to='/contact' onClick={() => setIsVisible(!isVisible)}>
-              Contact
-            </Link>
-          </h1>
-        </div>
-      </div>
-    </Wrapper>
+    <>
+      {!isMdScreen && (
+        <Wrapper isVisible={isVisible}>
+          <div className='close'>
+            <button onClick={() => setIsVisible(!isVisible)}>X</button>
+          </div>
+          <div className='menu'>
+            <div className='title'>
+              <h2>Menu</h2>
+            </div>
+            <div className='links'>
+              <h1>
+                <Link to='/' onClick={() => setIsVisible(!isVisible)}>
+                  Home
+                </Link>
+              </h1>
+              <h1>
+                <AnchorLink
+                  to='/#projects'
+                  title='Projects'
+                  stripHash
+                  onAnchorLinkClick={() => setIsVisible(!isVisible)}
+                >
+                  Projects
+                </AnchorLink>
+              </h1>
+              <h1>
+                <Link to='/contact' onClick={() => setIsVisible(!isVisible)}>
+                  Contact
+                </Link>
+              </h1>
+            </div>
+          </div>
+        </Wrapper>
+      )}
+    </>
   )
 }
 
