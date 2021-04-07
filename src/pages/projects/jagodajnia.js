@@ -22,14 +22,16 @@ const Jagodajnia = () => {
         src='../../images/jagodajnia-main.jpeg'
         alt='Jagodajnia home page'
         placeholder='blurred'
-        style={{ marginBottom: `1rem` }}
         quality='100'
+        layout='fullWidth'
+        style={{ marginBottom: `1rem` }}
       />
       <StaticImage
         src='../../images/jagodajnia-text.jpeg'
         alt="Jagodajnia home page 'about' section "
         placeholder='blurred'
         quality='100'
+        layout='fullWidth'
       />
     </Wrapper>
   )

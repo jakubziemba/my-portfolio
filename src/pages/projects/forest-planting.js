@@ -19,28 +19,32 @@ const ForestPlanting = () => {
         src='../../images/forest-planting-main.jpeg'
         alt='Forest Planting home page'
         placeholder='blurred'
-        style={{ marginBottom: `1rem` }}
         quality='100'
+        layout='fullWidth'
+        style={{ marginBottom: `1rem` }}
       />
       <StaticImage
         src='../../images/forest-planting-one.jpeg'
         alt='Forest Planting section one'
         placeholder='blurred'
-        style={{ marginBottom: `1rem` }}
         quality='100'
+        layout='fullWidth'
+        style={{ marginBottom: `1rem` }}
       />
       <StaticImage
         src='../../images/forest-planting-three.jpeg'
         alt='Forest Planting section three'
         placeholder='blurred'
-        style={{ marginBottom: `1rem` }}
         quality='100'
+        layout='fullWidth'
+        style={{ marginBottom: `1rem` }}
       />
       <StaticImage
         src='../../images/forest-planting-modal.jpeg'
         alt='Forest Planting section three modal with horizontal timeline'
         placeholder='blurred'
         quality='100'
+        layout='fullWidth'
       />
     </Wrapper>
   )
