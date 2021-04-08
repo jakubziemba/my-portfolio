@@ -8,7 +8,7 @@ const About = () => {
     <StyledWrapper id='about'>
       <Description>
         <p>
-          Hello,
+          Hi,
           <br /> My name is Jakub and I’m a web developer, designer and musician
           based in Warsaw, Poland.
         </p>
@@ -17,9 +17,7 @@ const About = () => {
           strive to create digital experiences that are focused on simplicity,
           aesthetics and emotions.
         </p>
-        <p>
-          I work with technologies like React, Gatsby, Framer Motion and GSAP.
-        </p>
+        <p>I work in React, Gatsby, Framer Motion, GSAP and more.</p>
       </Description>
     </StyledWrapper>
   )
