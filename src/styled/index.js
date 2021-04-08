@@ -58,6 +58,10 @@ export const ProjectDescription = styled(Description)`
   p {
     font-size: ${({ theme }) => theme.fontSize.mdsm};
     margin-bottom: 1.25rem;
+
+    &:first-of-type {
+      font-weight: bold;
+    }
   }
 
   @media (min-width: 768px) {
