@@ -68,7 +68,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    top: 2rem;
+    top: 10%;
     right: 1rem;
     width: 100%;
 
@@ -89,7 +89,6 @@ const Wrapper = styled.div`
     flex-flow: column nowrap;
     justify-content: center;
     height: 100%;
-    /* padding-top: 5rem; */
     align-self: center;
     text-align: right;
     width: 100%;
@@ -98,17 +97,7 @@ const Wrapper = styled.div`
 
     .title {
       position: relative;
-      padding-bottom: 2rem;
-
-      &:after {
-        content: '';
-        position: absolute;
-        height: 3px;
-        width: 6.5rem;
-        right: 0;
-        bottom: 2.25rem;
-        background: ${({ theme }) => theme.colors.bg};
-      }
+      padding-bottom: 1rem;
     }
 
     h1 {

@@ -19,6 +19,14 @@ const Layout = ({ children }) => {
     )
   }, [])
 
+  useEffect(() => {
+    if (isVisible) {
+      document.body.classList.add('noscroll')
+    } else {
+      document.body.classList.remove('noscroll')
+    }
+  }, [isVisible])
+
   return (
     <div ref={wrapperRef} style={{ opacity: 0 }}>
       <Header isVisible={isVisible} setIsVisible={setIsVisible} />
