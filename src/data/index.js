@@ -6,6 +6,7 @@ const projects = [
     date: '2021 / In Progress',
     role: 'Development',
     tech: 'Gatsby, Styled Components, i18n, Framer Motion',
+    category: 'Website',
   },
   {
     id: 1,
@@ -14,6 +15,7 @@ const projects = [
     date: '2021',
     role: 'Design / Development',
     tech: 'Gatsby, Styled Components, Framer Motion, FlexyForm, Prismic',
+    category: 'Website',
   },
   {
     id: 2,
@@ -22,6 +24,7 @@ const projects = [
     date: '2020',
     role: 'Design / Developement',
     tech: 'Next.js, CSS Modules, Framer Motion',
+    category: 'Website',
   },
 ]
 

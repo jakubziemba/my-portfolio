@@ -20,6 +20,7 @@ const Card = () => {
               <Date>{project.date}</Date>
               <Role>{project.role}</Role>
               <Tech>{project.tech}</Tech>
+              <Category>{project.category}</Category>
             </TextWrapper>
             {photos.map(photo => {
               if (photo.node.name === `${project.path}-main`) {
@@ -76,6 +77,9 @@ const CardWrapper = styled.div`
 `
 
 const TextWrapper = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+
   @media (min-width: 768px) {
     width: 50%;
   }
@@ -85,12 +89,13 @@ const Title = styled.h2`
   display: flex;
   max-width: 70%;
   line-height: 122%;
-  padding: 0rem 1rem 0rem;
+  padding: 1rem 1rem 0rem;
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-family: ${({ theme }) => theme.font.sans};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
 
   @media (min-width: 768px) {
+    padding-top: 0;
     font-size: ${({ theme }) => theme.fontSize.xllg};
     margin-top: -6px;
   }
@@ -143,6 +148,11 @@ const Role = styled(Tech)`
   @media (min-width: 768px) {
     font-size: ${({ theme }) => theme.fontSize.mdsm};
   }
+`
+
+const Category = styled(Role)`
+  color: #717171;
+  margin-top: auto;
 `
 
 const ImageWrapper = styled.div`
