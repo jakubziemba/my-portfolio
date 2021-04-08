@@ -47,7 +47,7 @@ const Card = () => {
 const CardWrapper = styled.div`
   display: flex;
   flex-flow: row wrap;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(6px);
   border-radius: 10px;
   z-index: 2;
@@ -63,7 +63,7 @@ const CardWrapper = styled.div`
     }
 
     &:hover {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.09);
       .text {
         transform: translateX(1rem);
       }
@@ -85,13 +85,14 @@ const Title = styled.h2`
   display: flex;
   max-width: 70%;
   line-height: 122%;
-  padding: 1rem 1rem 0rem;
+  padding: 0rem 1rem 0rem;
   font-size: ${({ theme }) => theme.fontSize.lg};
   font-family: ${({ theme }) => theme.font.sans};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
 
   @media (min-width: 768px) {
     font-size: ${({ theme }) => theme.fontSize.xllg};
+    margin-top: -6px;
   }
 
   @media (min-width: 960px) {
