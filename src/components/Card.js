@@ -151,8 +151,13 @@ const Role = styled(Tech)`
 `
 
 const Category = styled(Role)`
+  padding-bottom: 0.5rem;
   color: #717171;
-  margin-top: auto;
+
+  @media (min-width: 768px) {
+    margin-top: auto;
+    padding-bottom: 0;
+  }
 `
 
 const ImageWrapper = styled.div`
