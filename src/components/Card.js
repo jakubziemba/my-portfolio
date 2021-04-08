@@ -98,6 +98,14 @@ const Title = styled.h2`
   @media (min-width: 960px) {
     max-width: 80%;
   }
+
+  @media (min-width: 1400px) {
+    margin-top: 0.5rem;
+  }
+
+  @media (min-width: 1600px) {
+    margin-top: 1rem;
+  }
 `
 
 const Date = styled.h3`
