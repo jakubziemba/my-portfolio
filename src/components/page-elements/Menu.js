@@ -57,7 +57,7 @@ const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.txt};
   font-family: ${({ theme }) => theme.font.slab};
   font-weight: ${({ theme }) => theme.fontWeight.md};
-  transition: all 0.2s ease;
+  transition: all 0.4s ease-in-out;
   height: 100vh;
   transform: ${({ isVisible }) =>
     isVisible ? `translateX(0%)` : `translateX(100%)`};
@@ -68,8 +68,8 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    top: 10%;
-    right: 1rem;
+    top: 1.5rem;
+    right: 1.5rem;
     width: 100%;
 
     button {
@@ -92,7 +92,7 @@ const Wrapper = styled.div`
     align-self: center;
     text-align: right;
     width: 100%;
-    padding-right: 1rem;
+    padding-right: 1.5rem;
     line-height: 4rem;
 
     .title {
