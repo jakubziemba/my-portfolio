@@ -31,7 +31,6 @@ const Card = () => {
                       alt={`${photo.node.name} project`}
                       objectFit='contain'
                       objectPosition='0% 100%'
-                      // layout='fullWidth'
                     />
                   </ImageWrapper>
                 )
