@@ -36,10 +36,16 @@ const Contact = () => {
               </StyledLink>
             </li>
             <li>
-              <StyledLink href='https://t.me/saintjcob'>
+              <StyledLink href='https://t.me/saintjcob' target='_blank'>
                 Telegram <span className='arrow'>&#8594;</span>
               </StyledLink>
             </li>
+          </Links>
+          <p>...or find me on GitHub: </p>
+          <Links>
+            <StyledLink href='https://github.com/jakubziemba' target='_blank'>
+              GitHub <span className='arrow'>&#8594;</span>
+            </StyledLink>
           </Links>
         </Description>
       </Wrapper>
@@ -49,6 +55,7 @@ const Contact = () => {
 
 const Links = styled.ul`
   margin-top: 3rem;
+  margin-bottom: 5rem;
 `
 
 const StyledLink = styled(Link)`
