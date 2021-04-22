@@ -22,10 +22,10 @@ const Layout = ({ children }) => {
   useEffect(() => {
     if (isVisible) {
       document.body.classList.add('noscroll')
-      document.querySelector('html').classList.add('noscroll')
+      document.querySelector('html').style.height = '100vh'
     } else {
+      document.querySelector('html').style.height = 'auto'
       document.body.classList.remove('noscroll')
-      document.querySelector('html').classList.remove('noscroll')
     }
   }, [isVisible])
 
