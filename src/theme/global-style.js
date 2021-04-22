@@ -67,6 +67,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   .noscroll {
-    position: fixed;
+    overflow: hidden;
   }
 `
