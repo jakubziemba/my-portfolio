@@ -71,6 +71,5 @@ export const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     height: -webkit-fill-available;
     height: 100vh;
-    pointer-events: none;
   }
 `
