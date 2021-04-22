@@ -53,6 +53,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Standard", sans-serif;
     background: #030303;
     color: #FCFCFC;
+    height: -webkit-fill-available;
   }
   
   body {
@@ -70,5 +71,6 @@ export const GlobalStyle = createGlobalStyle`
     overflow: hidden;
     height: -webkit-fill-available;
     height: 100vh;
+    pointer-events: none;
   }
 `

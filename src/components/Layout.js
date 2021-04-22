@@ -21,6 +21,7 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     if (isVisible) {
+      document.querySelector('html').scrollTop = window.scrollY
       document.body.classList.add('noscroll')
     } else {
       document.body.classList.remove('noscroll')
