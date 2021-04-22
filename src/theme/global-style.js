@@ -68,7 +68,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .noscroll {
     overflow: hidden;
-    height: 100vh;
     height: -webkit-fill-available;
+    height: 100vh;
   }
 `

@@ -22,9 +22,7 @@ const Layout = ({ children }) => {
   useEffect(() => {
     if (isVisible) {
       document.body.classList.add('noscroll')
-      document.querySelector('html').style.height = '-webkit-fill-available '
     } else {
-      document.querySelector('html').style.height = 'auto'
       document.body.classList.remove('noscroll')
     }
   }, [isVisible])
