@@ -66,8 +66,8 @@ export const GlobalStyle = createGlobalStyle`
     color: #FCFCFC;
   }
 
-  .noscroll {
-    overflow: hidden;
-    height: 100vh;
+  body.noscroll {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
   }
 `
