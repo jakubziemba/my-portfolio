@@ -1,9 +1,8 @@
-import React from 'react'
-
-import FadeIn from '../components/FadeIn'
-import SEO from '../components/SEO'
 import About from '../components/About'
+import FadeIn from '../components/FadeIn'
 import Projects from '../components/Projects'
+import React from 'react'
+import SEO from '../components/SEO'
 
 const Home = () => {
   return (
