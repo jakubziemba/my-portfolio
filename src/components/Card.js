@@ -1,10 +1,9 @@
-import React from 'react'
-import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import styled from 'styled-components'
-
-import useQueryCard from 'query/useQueryCard'
+import { Link } from 'gatsby'
+import React from 'react'
 import projects from '../data'
+import styled from 'styled-components'
+import useQueryCard from 'query/useQueryCard'
 
 const Card = () => {
   const data = useQueryCard()
@@ -13,7 +12,10 @@ const Card = () => {
   return (
     <>
       {projects.map(project => (
-        <StyledLink key={project.path} to={`/projects/${project.path}`}>
+        <StyledLink
+          key={project.path || project.id}
+          to={project.path ? `/projects/${project.path}` : null}
+        >
           <CardWrapper>
             <TextWrapper className='text'>
               <Title>{project.title}</Title>
