@@ -1,11 +1,12 @@
 const projects = [
   {
     id: 0,
-    path: 'forest-planting',
-    title: 'Forest Planting',
-    date: '2021 / In Progress',
-    role: 'Development',
-    tech: 'Gatsby, Styled Components, i18n, Framer Motion',
+    path: 'hait',
+    title: 'Hait',
+    date: '2022 / In Progress',
+    role: 'Research & Design',
+    desc:
+      'A meme service for Nepali people. <br />Designed with Material UI elements.',
     category: 'Website',
   },
   {
@@ -14,7 +15,8 @@ const projects = [
     title: 'Roksana Machowska',
     date: '2020',
     role: 'Design / Developement',
-    tech: 'Next.js, CSS Modules, Framer Motion',
+    desc:
+      'A portfolio website for a Polish artist. <br />Built with Next.js, CSS Modules, Framer Motion',
     category: 'Website',
   },
   {
@@ -24,11 +26,11 @@ const projects = [
   },
 ]
 
-export const forestText = [
-  'A website for a board game.',
-  'Forest Planting is a beautifully designed simulation board game and discussion experience designed by experienced leaders to help teams form, grow, multiply and collaborate.',
-  "My role in the project as a developer was to bring the designer's ideas and solutions to life and to further develop the already existing parts of the website.",
-  'For this project we are using React (Gatsby) with Styled Components, i18n for language variants (coming in the future) and Framer Motion for animations. Ultimately, Forest Planting website will be connected to a CMS for easier content management.',
+export const haitText = [
+  'A meme service for Nepali people.',
+  'Hait is a project started by my friend and previous coding mentor Marcin, who asked me to create a design for a Nepali meme service, which his coding students from Nepali orphanage will implement in React. The challenge was to create a simple design that would be easy to use and understand, but also not too complicated for beginner developers to implement in code.',
+  "My role in the project was to conduct interviews, in pair with Julian - my friend and UX Designer, with Nepali people, do a desk research about Nepali culture and internet usage, create mockups and UI. The timeline wasn't long - we had 2 months to finish the project. We were asked to use Material UI elements, which wasn't my favorite choice because of creative constraints, but I tried to use it to the best of my possibilites.",
+  'The website is currently in development and is expected to be released by the end of April 2022.',
 ]
 
 export const machowskaText = [

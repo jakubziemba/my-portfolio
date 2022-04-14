@@ -85,4 +85,14 @@ export const Link = styled.a`
   @media (min-width: 768px) {
     font-size: ${({ theme }) => theme.fontSize.mdsm};
   }
+
+  span {
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover span {
+    display: inline-block;
+    transform: rotate(-45deg);
+    transition: all 0.2s ease-in-out;
+  }
 `

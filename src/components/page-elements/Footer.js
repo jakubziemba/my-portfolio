@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <div className='copy'>
-        <p>Copyright © 2021. All rights reserved. </p>
+        <p>Copyright © 2022. All rights reserved. </p>
       </div>
     </StyledFooter>
   )

@@ -21,7 +21,7 @@ const Card = () => {
               <Title>{project.title}</Title>
               <Date>{project.date}</Date>
               <Role>{project.role}</Role>
-              <Tech>{project.tech}</Tech>
+              <Tech dangerouslySetInnerHTML={{ __html: project.desc }}></Tech>
               <Category>{project.category}</Category>
             </TextWrapper>
             {photos.map(photo => {
