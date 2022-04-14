@@ -128,7 +128,7 @@ const Date = styled.h3`
 
 const Tech = styled.div`
   display: flex;
-  padding: 0.25rem 1rem 1rem;
+  padding: 0.55rem 1rem 1rem;
   font-size: 1.125rem;
   line-height: 140%;
 
