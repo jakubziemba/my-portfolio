@@ -52,9 +52,7 @@ const ImageWrapper = styled.div`
   position: relative;
 
   .cover {
-    background: rgba(255, 205, 28, 0.5);
     width: 100%;
-    height: 100%;
     position: relative;
 
     &:before {
