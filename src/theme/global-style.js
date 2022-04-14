@@ -47,6 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -64,6 +65,18 @@ export const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
     color: #FCFCFC;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    span {
+      display: inline-block;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover span {
+      transform: rotate(-45deg);
+      transition: all 0.2s ease-in-out;
+    }
   }
 
   body.noscroll {

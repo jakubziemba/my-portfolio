@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 
 import FadeIn from '../../components/FadeIn'
-import SEO from '../../components/SEO'
+import MyHelmet from '../../components/MyHelmet'
 import Links from '../../components/Links'
 import { ProjectTitle, Wrapper, ProjectDescription } from '../../styled'
 import { machowskaText } from '../../data'
@@ -12,7 +12,7 @@ const Machowska = () => {
   return (
     <FadeIn>
       <Wrapper>
-        <SEO
+        <MyHelmet
           title='Roksana Machowska portfolio'
           link='https://jakub.works/projects/roksana-machowska'
         />

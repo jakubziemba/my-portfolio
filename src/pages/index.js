@@ -2,12 +2,12 @@ import About from '../components/About'
 import FadeIn from '../components/FadeIn'
 import Projects from '../components/Projects'
 import React from 'react'
-import SEO from '../components/SEO'
+import MyHelmet from '../components/MyHelmet'
 
 const Home = () => {
   return (
     <FadeIn>
-      <SEO title='Jakub Ziemba' link='https://jakub.works' />
+      <MyHelmet title='Jakub Ziemba' link='https://jakub.works' />
       <About />
       <Projects />
     </FadeIn>

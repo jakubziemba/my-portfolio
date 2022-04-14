@@ -33,9 +33,13 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   min-height: 4rem;
-  background-color: ${({ theme }) => theme.colors.bg};
   padding: 0 0.75rem;
   color: ${({ theme }) => theme.colors.txt};
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  mix-blend-mode: difference;
+  backdrop-filter: blur(2px);
 
   .logoContainer {
     margin-top: 0.5rem;

@@ -14,7 +14,7 @@ const Card = () => {
       {projects.map(project => (
         <StyledLink
           key={project.path || project.id}
-          to={project.path ? `/projects/${project.path}` : null}
+          to={project.path ? `/projects/${project.path}` : '/#projects'}
         >
           <CardWrapper>
             <TextWrapper className='text'>
