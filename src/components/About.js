@@ -17,6 +17,7 @@ const About = () => {
               quality='100'
               layout='fullWidth'
               style={{ marginBottom: `1rem`, marginTop: `0` }}
+              loading='eager'
             />
           </div>
         </ImageWrapper>

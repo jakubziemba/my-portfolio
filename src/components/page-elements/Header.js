@@ -33,13 +33,22 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   min-height: 4.5rem;
+  background: transparent;
   padding: 0 0.75rem;
   color: ${({ theme }) => theme.colors.txt};
   position: sticky;
   top: 0;
   z-index: 1;
   mix-blend-mode: difference;
-  backdrop-filter: blur(2px);
+  isolation: isolate;
+
+  @supports (backdrop-filter: blur(2px)) {
+    backdrop-filter: blur(2px);
+  }
+
+  @supports not (backdrop-filter: blur(2px)) {
+    background-color: transparent;
+  }
 
   .logoContainer {
     margin-top: 0.5rem;
@@ -51,6 +60,7 @@ const Nav = styled.nav`
     font-family: ${({ theme }) => theme.font.sans};
     cursor: pointer;
     color: ${({ theme }) => theme.colors.txt};
+    mix-blend-mode: difference;
 
     &::visited,
     &::active,
@@ -74,8 +84,9 @@ const Star = styled(StarSvg)`
   right: 0.75rem;
   width: 50px;
   height: 50px;
-  z-index: 2;
+  z-index: 1;
   cursor: pointer;
+  mix-blend-mode: difference;
 `
 
 const Menu = styled.div`
