@@ -20,7 +20,7 @@ const ForestPlanting = () => {
           ))}
         </ProjectDescription>
         <StaticImage
-          src='../../images/hait-main.png'
+          src='../../images/hait-main.jpg'
           alt='Hait desktop view'
           placeholder='blurred'
           quality='100'
