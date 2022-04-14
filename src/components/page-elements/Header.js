@@ -32,7 +32,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 4rem;
+  min-height: 4.5rem;
   padding: 0 0.75rem;
   color: ${({ theme }) => theme.colors.txt};
   position: sticky;
@@ -70,7 +70,7 @@ const Nav = styled.nav`
 
 const Star = styled(StarSvg)`
   position: fixed;
-  top: 1rem;
+  top: 0.75rem;
   right: 0.75rem;
   width: 50px;
   height: 50px;
