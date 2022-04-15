@@ -20,9 +20,9 @@ const projects = [
     category: 'Website',
   },
   {
-    id: 3,
+    id: 2,
     title: 'More projects coming soon...',
-    date: 2021,
+    date: 2022,
   },
 ]
 
