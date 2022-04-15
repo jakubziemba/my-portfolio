@@ -33,7 +33,6 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   min-height: 4.5rem;
-  background: transparent;
   padding: 0 0.75rem;
   color: ${({ theme }) => theme.colors.txt};
   position: sticky;
@@ -46,8 +45,9 @@ const Nav = styled.nav`
     backdrop-filter: blur(2px);
   }
 
-  @supports not (backdrop-filter: blur(2px)) {
-    background-color: transparent;
+  @supports (-webkit-backdrop-filter: blur(2px)) {
+    -webkit-backdrop-filter: blur(2px);
+    mix-blend-mode: normal;
   }
 
   .logoContainer {
