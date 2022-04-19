@@ -18,17 +18,20 @@ const Contact = () => {
           </p>
           <Links>
             <li>
-              <StyledLink to='mailto:ziemba.jak@gmail.com'>
+              <StyledLink href='mailto:ziemba.jak@gmail.com'>
                 Email <span className='arrow'>&#8594;</span>
               </StyledLink>
             </li>
             <li>
-              <StyledLink to='https://twitter.com/saintjcob' target='_blank'>
+              <StyledLink href='https://twitter.com/saintjcob' target='_blank'>
                 Twitter <span className='arrow'>&#8594;</span>
               </StyledLink>
             </li>
             <li>
-              <StyledLink to='https://instagram.com/saintjcob' target='_blank'>
+              <StyledLink
+                href='https://instagram.com/saintjcob'
+                target='_blank'
+              >
                 Instagram <span className='arrow'>&#8594;</span>
               </StyledLink>
             </li>
@@ -40,7 +43,7 @@ const Contact = () => {
           </Links>
           <p>...or find me on GitHub: </p>
           <Links>
-            <StyledLink to='https://github.com/jakubziemba' target='_blank'>
+            <StyledLink href='https://github.com/jakubziemba' target='_blank'>
               GitHub <span className='arrow'>&#8594;</span>
             </StyledLink>
           </Links>
