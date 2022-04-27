@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { useMediaQuery } from 'react-responsive'
 import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
@@ -8,6 +8,20 @@ import StarSvg from '../../assets/star.inline.svg'
 
 const Header = ({ isVisible, setIsVisible }) => {
   const isMdScreen = useMediaQuery({ minWidth: 768 })
+
+  useLayoutEffect(() => {
+    window.onscroll = function () {
+      scrollRotate()
+    }
+
+    function scrollRotate() {
+      const starIcon = document.querySelector('.star')
+      starIcon &&
+        (starIcon.style.transform =
+          'rotate(' + window.pageYOffset / -12 + 'deg)')
+    }
+  }, [])
+
   return (
     <Nav>
       <div className='logoContainer'>
@@ -15,7 +29,9 @@ const Header = ({ isVisible, setIsVisible }) => {
           Jakub Ziemba
         </Link>
       </div>
-      {!isMdScreen && <Star onClick={() => setIsVisible(!isVisible)} />}
+      {!isMdScreen && (
+        <Star className='star' onClick={() => setIsVisible(!isVisible)} />
+      )}
       {isMdScreen && (
         <Menu>
           <AnchorLink to='/#projects' title='Projects' stripHash>
@@ -27,6 +43,15 @@ const Header = ({ isVisible, setIsVisible }) => {
     </Nav>
   )
 }
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`
 
 const Nav = styled.nav`
   display: flex;
@@ -87,6 +112,8 @@ const Star = styled(StarSvg)`
   z-index: 1;
   cursor: pointer;
   mix-blend-mode: difference;
+
+  /* animation: ${rotate} 10s linear infinite; */
 `
 
 const Menu = styled.div`
