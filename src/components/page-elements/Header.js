@@ -18,7 +18,7 @@ const Header = ({ isVisible, setIsVisible }) => {
       const starIcon = document.querySelector('.star')
       starIcon &&
         (starIcon.style.transform =
-          'rotate(' + window.pageYOffset / -12 + 'deg)')
+          'rotate(' + window.pageYOffset / -7 + 'deg)')
     }
   }, [])
 
